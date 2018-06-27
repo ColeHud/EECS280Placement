@@ -9,6 +9,30 @@
 #include <cstring>
 using namespace std;
 
+//testing
+int main()
+{
+    char array[] = "a#~ *";
+    
+    /*
+    for(int i = 0; i < 100; i++)
+    {
+        cout<<i;
+        cout<<":  ";
+        add(array, 5, i);
+        cout<<"\n";
+    }
+     */
+    
+    add(array, 5, 3);
+     
+    printArray(array, 5);
+    
+    //printArray(array, 5);
+    
+    return 0;
+}
+
 //done testing
 void printRight(int n)
 {
@@ -65,14 +89,14 @@ void printArray(const char arr[][SIZE], int rows, int cols)
     }
 }
 
-//done testing
+//FIX IT
 void add(char arr[], int size, int val)
 {
     for(int i = 0; i < size; i++)
     {
         char character = arr[i];
         int asciiCode = character;
-        asciiCode += 5;
+        asciiCode += val;
         
         if(asciiCode < MIN_PRINTABLE_ASCII)
         {
@@ -88,7 +112,7 @@ void add(char arr[], int size, int val)
     }
 }
 
-//done testing (ish)
+//FIX IT
 void add(char arr[][SIZE], int rows, int cols, int val)
 {
     for(int i = 0; i < rows; i++)
@@ -97,7 +121,7 @@ void add(char arr[][SIZE], int rows, int cols, int val)
     }
 }
 
-//done testing
+//FIX IT
 void rotateLeft(char arr[], int size)
 {
     char characterToRotate = arr[0];
@@ -108,7 +132,7 @@ void rotateLeft(char arr[], int size)
     arr[size - 1] = characterToRotate;
 }
 
-//done testing
+//FIX IT
 void rotateLeft(char arr[][SIZE], int rows, int cols)
 {
     for(int i = 0; i < rows; i++)
